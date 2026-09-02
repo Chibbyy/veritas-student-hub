@@ -200,3 +200,42 @@ html {
   border-radius: 4px;
   color: #444;
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #eee;
+  box-shadow: none;
+}
+
+body.dark-mode section h2 {
+  color: #7aa4e8;
+  border-bottom-color: #333;
+}
+
+body.dark-mode .course-table th {
+  background-color: #2a5599;
+}
+
+body.dark-mode .course-table tr:hover {
+  background-color: #262626;
+}
+
+#theme-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#theme-toggle:hover {
+  background-color: white;
+  color: #10284d;
+}
