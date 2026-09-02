@@ -176,3 +176,19 @@ html {
     padding: 6px;
   }
 }
+
+.contact-button {
+  display: inline-block;
+  background-color: #1a3c6e;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.contact-button:hover {
+  background-color: #2a5599;
+}
