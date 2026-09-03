@@ -264,3 +264,34 @@ body.dark-mode #search-input {
   color: #eee;
   border-color: #7aa4e8;
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #1a3c6e;
+  color: white;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background-color 0.2s;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  background-color: #2a5599;
+}
+
+body.dark-mode #back-to-top {
+  background-color: #7aa4e8;
+  color: #121212;
+}
