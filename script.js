@@ -84,3 +84,29 @@ favoriteButtons.forEach(function (button) {
     updateStar(button, favorites.includes(id));
   });
 });
+
+const favoritesFilterButton = document.getElementById('favorites-filter');
+let showingFavoritesOnly = false;
+
+favoritesFilterButton.addEventListener('click', function () {
+  showingFavoritesOnly = !showingFavoritesOnly;
+  const favorites = getFavorites();
+
+  searchableItems.forEach(function (item) {
+    const id = item.getAttribute('data-id');
+
+    if (showingFavoritesOnly) {
+      item.style.display = favorites.includes(id) ? '' : 'none';
+    } else {
+      item.style.display = '';
+    }
+  });
+
+  favoritesFilterButton.textContent = showingFavoritesOnly
+    ? '📋 Show All'
+    : '⭐ Show Favorites Only';
+
+  favoritesFilterButton.classList.toggle('active', showingFavoritesOnly);
+
+  searchInput.value = '';
+});
