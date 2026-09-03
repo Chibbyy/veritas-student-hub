@@ -39,3 +39,12 @@ window.addEventListener('scroll', function () {
 backToTopButton.addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(function (question) {
+  question.addEventListener('click', function () {
+    const item = question.parentElement;
+    item.classList.toggle('active');
+  });
+});
