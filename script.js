@@ -9,3 +9,19 @@ toggleButton.addEventListener('click', function () {
     toggleButton.textContent = '🌙 Dark Mode';
   }
 });
+
+const searchInput = document.getElementById('search-input');
+const searchableItems = document.querySelectorAll('.searchable');
+
+searchInput.addEventListener('input', function () {
+  const query = searchInput.value.toLowerCase().trim();
+
+  searchableItems.forEach(function (item) {
+    const text = item.getAttribute('data-search');
+    if (text.includes(query)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});

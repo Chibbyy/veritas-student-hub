@@ -9,7 +9,9 @@
 <body>
   <h1>Veritas University Student Hub</h1>
   <p>A place for Veritas University students to find lecture materials, past questions, course information, useful links, departmental announcements, and academic resources — all in one place.</p>
-
+    <div class="search-container">
+    <input type="text" id="search-input" placeholder="🔍 Search resources (e.g. CSC 101, Calculus)...">
+  </div>
   <nav>
     <ul>
       <li><a href="#lecture-materials">Lecture Materials</a></li>
@@ -21,14 +23,22 @@
     </ul>
     <button id="theme-toggle">🌙 Dark Mode</button>
   </nav>
-  <section id="lecture-materials">
+    <section id="lecture-materials">
     <h2>Lecture Materials</h2>
-    <p class="coming-soon">📚 Materials are being gathered — check back soon, or use the Contact section below to share notes/slides you'd like added here.</p>
+    <ul class="resource-list">
+      <li class="searchable" data-search="csc 101 introduction computer science"><a href="materials/csc101-intro.pdf" target="_blank">CSC 101 – Introduction to Computer Science (PDF)</a></li>
+      <li class="searchable" data-search="mth 102 calculus"><a href="materials/mth102-calculus.pdf" target="_blank">MTH 102 – Calculus Notes (PDF)</a></li>
+      <li class="searchable" data-search="phy 101 mechanics"><a href="materials/phy101-mechanics.pdf" target="_blank">PHY 101 – Mechanics Slides (PDF)</a></li>
+    </ul>
   </section>
 
   <section id="past-questions">
     <h2>Past Questions</h2>
-    <p class="coming-soon">📝 Past questions are being collected — check back soon, or reach out via the Contact section if you have any to contribute.</p>
+    <ul class="resource-list">
+      <li class="searchable" data-search="csc 101 2023 exam"><a href="past-questions/csc101-2023.pdf" target="_blank">CSC 101 – 2023 Exam</a></li>
+      <li class="searchable" data-search="mth 102 2023 exam"><a href="past-questions/mth102-2023.pdf" target="_blank">MTH 102 – 2023 Exam</a></li>
+      <li class="searchable" data-search="phy 101 2022 exam"><a href="past-questions/phy101-2022.pdf" target="_blank">PHY 101 – 2022 Exam</a></li>
+    </ul>
   </section>
 
   <section id="course-information">
