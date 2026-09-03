@@ -346,3 +346,21 @@ body.dark-mode .faq-question {
 body.dark-mode .faq-answer p {
   color: #ccc;
 }
+
+.resource-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #d4a017;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.15);
+}

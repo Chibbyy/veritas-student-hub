@@ -48,3 +48,39 @@ faqQuestions.forEach(function (question) {
     item.classList.toggle('active');
   });
 });
+
+const favoriteButtons = document.querySelectorAll('.favorite-btn');
+
+function getFavorites() {
+  const saved = localStorage.getItem('veritas-favorites');
+  return saved ? JSON.parse(saved) : [];
+}
+
+function saveFavorites(favorites) {
+  localStorage.setItem('veritas-favorites', JSON.stringify(favorites));
+}
+
+function updateStar(button, isFavorite) {
+  button.textContent = isFavorite ? '★' : '☆';
+}
+
+const currentFavorites = getFavorites();
+
+favoriteButtons.forEach(function (button) {
+  const id = button.getAttribute('data-id');
+  updateStar(button, currentFavorites.includes(id));
+
+  button.addEventListener('click', function () {
+    let favorites = getFavorites();
+    const id = button.getAttribute('data-id');
+
+    if (favorites.includes(id)) {
+      favorites = favorites.filter(function (favId) { return favId !== id; });
+    } else {
+      favorites.push(id);
+    }
+
+    saveFavorites(favorites);
+    updateStar(button, favorites.includes(id));
+  });
+});
