@@ -110,3 +110,15 @@ favoritesFilterButton.addEventListener('click', function () {
 
   searchInput.value = '';
 });
+
+const resultsCount = document.getElementById('results-count');
+
+function updateResultsCount() {
+  const visibleItems = document.querySelectorAll('.searchable:not([style*="display: none"])');
+  resultsCount.textContent = visibleItems.length + ' resource(s) shown';
+}
+
+searchInput.addEventListener('input', updateResultsCount);
+favoritesFilterButton.addEventListener('click', updateResultsCount);
+
+updateResultsCount();
